@@ -86,19 +86,25 @@ while True:
             for index, menu_option in enumerate(profile_menu, 1):
                 print(f"{index}. {menu_option}")
             user_input = get_menu_input('Please select one of the options by inputting its number: ', profile_menu)
+
             if user_input == 1:
+                # Display User Info
                 print(logged_user.display_info())
+
             elif user_input == 2:
+                # Edit Profile
                 edit_profile_menu = ['Change Weight', 'Change Goal']
                 for index, edit_menu_item in enumerate(edit_profile_menu, 1):
                     print(f'{index}. {edit_menu_item}')
                 user_input = get_menu_input('Please select one of the options by inputting its number: ',
                                             edit_profile_menu)
                 if user_input == 1:
+                    # Change Weight
                     new_weight = get_float_input('Please input your new weight:')
                     logged_user.weight = new_weight
                     print(f'Your new weight is {logged_user.weight:.2f}.')
                 elif user_input == 2:
+                    # Change Goal
                     new_goal = get_string_input('Please input your new goal: ')
                     logged_user.goal = new_goal
                     print(f'Your new goal is {logged_user.goal}.')
@@ -115,6 +121,7 @@ while True:
                 print(f"{index}. {menu_option}")
             user_input = get_menu_input('Please select one of the options by inputting its number: ', exercise_menu)
             if user_input == 1 or user_input == 3:
+                # View Exercises/Remove Exercise From Database
                 for index, exercise in enumerate(exercise_list, 1):
                     print(f'{index}. ' + exercise.display_exercise())
                 if user_input == 1:
@@ -125,7 +132,9 @@ while True:
                     print(
                         f'{exercise_list[remove_exercise_position].name} has been removed from the exercise database.')
                     exercise_list.pop(remove_exercise_position)
+
             elif user_input == 2:
+                # Add Exercise To Database
                 exercise_name = get_string_input('Please input the name of the exercise: ')
                 duplicate_exercise = False
                 for exercise in exercise_list:

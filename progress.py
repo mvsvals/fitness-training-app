@@ -1,16 +1,5 @@
-# Description: The ProgressTracker class tracks the user’s workout completion over time and
-# can generate reports on workout progress.
-#
-# Attributes:
-#
-#     user: The user whose progress is being tracked.
-#
-# Methods:
-#
-#     log_workout(workout): Add a completed workout to the user’s workout history.
-#     generate_report(): Generate a report summarizing the user’s workout history and statistics (e.g., number of workouts completed).
-from user import User
 
+from user import User
 
 class ProgressTracker:
 

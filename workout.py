@@ -1,16 +1,3 @@
-# Description: The Workout class represents a workout routine that includes a list of exercises.
-# Each exercise is associated with the number of sets, repetitions, and rest time.
-#
-# Attributes:
-#
-#     name: The name of the workout (e.g., "Full Body Workout").
-#     exercises: A list of exercises included in the workout. Each exercise will store the sets, reps, and rest time.
-#
-# Methods:
-#
-#     add_exercise(exercise, sets, reps, rest_time): Add an exercise to the workout.
-#     remove_exercise(exercise_name): Remove an exercise from the workout by name.
-#     view_workout(): Display all exercises in the workout, with sets, reps, and rest times.
 
 class Workout:
 
